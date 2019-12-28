@@ -4,7 +4,7 @@
 
 
 int main(int argc, char* argv[]) {
-	int hodnoty[9], i, len;
+	int hodnoty[9], i;
 
 	for (int i = 0; i <= 9; i++) {
 		scanf_s("%d", &hodnoty[i]);
