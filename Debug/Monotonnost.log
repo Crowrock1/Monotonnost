@@ -1,0 +1,4 @@
+﻿  Source.cpp
+D:\Škola\UPG\C\Monotonnost\Source.cpp(8,22): warning C4101: len: neodkazovaná lokální proměnná
+D:\Škola\UPG\C\Monotonnost\Source.cpp(8,19): warning C4101: i: neodkazovaná lokální proměnná
+  Monotonnost.vcxproj -> D:\Škola\UPG\C\Monotonnost\Debug\Monotonnost.exe
