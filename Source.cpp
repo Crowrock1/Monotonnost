@@ -4,16 +4,12 @@
 
 
 int main(int argc, char* argv[]) {
-	int hodnoty[9], i, hodnota;
+	int hodnoty[9], i;
 	bool x,y = false;
 
 	for (int i = 0; i <= 8; i++) {
 		scanf("%d", &hodnoty[i]);
 	}
-	hodnota = hodnoty[0];
-	/* for (int i = 0; i <= 9; i++){
-		printf("%d", hodnoty[i]);
-	}*/
 
 	for (int i = 1; i <= 7; i++) {
 		if (hodnoty[i - 1] < hodnoty[i] && hodnoty[i] < hodnoty[i + 1]) {
