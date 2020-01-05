@@ -4,23 +4,35 @@
 
 
 int main(int argc, char* argv[]) {
-	int hodnoty[9], i, hodnota;
+	int hodnoty[9], i, y = 0;
+	bool x;
 
 	for (int i = 0; i <= 8; i++) {
-		scanf_s("%d", &hodnoty[i]);
+		scanf("%d", &hodnoty[i]);
 	}
-	hodnota = hodnoty[0];
-	/* for (int i = 0; i <= 9; i++){
-		printf("%d", hodnoty[i]);
-	}*/
 
-	for (int i = 1; i <= 8
-		; i++) {
-		if (hodnota < hodnoty[i]) {
-			hodnota = hodnoty[i];
+	for (int i = 1; i <= 7; i++) {
+		if (hodnoty[i - 1] < hodnoty[i] && hodnoty[i] < hodnoty[i + 1]) {
+			x = true;
 		}
-		else return 1;
+		else if (hodnoty[i - 1] == hodnoty[i] && hodnoty[i] == hodnoty[i + 1]) {
+		       y = 2;
+		}
+		else if ((hodnoty[i - 1] == hodnoty[i]) ^ (hodnoty[i] == hodnoty[i + 1])) {
+            y = 1;    
+		}    
+		else if (hodnoty[i - 1] > hodnoty[i] && hodnoty[i] > hodnoty[i + 1]) {
+	        x = false;
+		}
 	}
-
+	if (y == 0)
+        printf(x ? "rostouci" : "klesajici");
+        
+    else if (y == 1)
+        printf(x ? "neklesajici" : "nerostouci");
+	
+	else if (y == 2)
+	    printf("konstantni");
+	    
 	return 0;
 }
